@@ -18,9 +18,7 @@ public class SecurityConfig {
                                 frameOptions.disable()
                 ))
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/h2-console/**").permitAll()
-
-                        .anyRequest().authenticated())
+                        .anyRequest().permitAll())
                 .build();
     }
 }
